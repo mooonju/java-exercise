@@ -9,11 +9,11 @@ public class CurrencyCnt {
 
         int refund = 25000;
 
-        System.out.println("5만원권 %d\n" + refund / curr50000);
-        System.out.println("만원권 %d\n" + refund / curr10000);
-        System.out.println("5천원권 %d\n" + refund / curr5000);
-        System.out.println("천원권 %d\n" + refund / curr1000);
-        System.out.println("500원 %d\n" + refund / curr500);
+        System.out.printf("5만원권 %d 나머지:%d\n", refund / curr50000, refund%curr50000);
+        System.out.printf("만원권 %d 나머지:%d\n", refund / curr10000, refund%curr10000);
+        System.out.printf("5천원권 %d 나머지:%d\n", refund / curr5000, refund%curr5000);
+        System.out.printf("천원권 %d 나머지:%d\n", refund / curr1000, refund%curr1000);
+        System.out.printf("5백원권 %d 나머지:%d\n", refund / curr500, refund%curr500);
 
     }
 }
