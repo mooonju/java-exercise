@@ -6,7 +6,7 @@ public class CurrencyCount {
         int money = 25000;
 
         int[] array = {50000,10000,5000,1000,500,100,50,10};
-        for(int i = 0; i<8;i++){
+        for(int i=0; i<8;i++){
             System.out.println(array[i]+"원: "+(money/array[i])+"개");
             money=money%array[i];
         }
