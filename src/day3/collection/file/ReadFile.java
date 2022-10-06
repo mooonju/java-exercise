@@ -7,15 +7,24 @@ import java.io.IOException;
 
 public class ReadFile {
 
-    public char printDirFiles(String filepath) throws IOException{
-        BufferedReader br = new BufferedReader(new FileReader(filepath), 16*1024);
-        return (char)br.read();
+    public void printOneLetter(String filename) throws IOException{
+        BufferedReader br = new BufferedReader(new FileReader(filename), 16*1024);
+        char ch = (char)br.read();
+        System.out.println(ch);
+    }
+
+    public void printTwoLetter(String filename) throws IOException{
+        FileReader fr = new FileReader(filename);
+        for(int i=0; i<2; i++){
+            char ch = (char)fr.read();
+            System.out.println(ch);
+        }
     }
 
     public static void main(String[] args) throws IOException{
         ReadFile readFile = new ReadFile();
-        char c1 = readFile.printDirFiles("./a_file.txt");
-        System.out.println(c1);
+        readFile.printOneLetter("./a_file.txt");
+        readFile.printTwoLetter("./a_file.txt");
 
     }
 }
