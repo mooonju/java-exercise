@@ -1,4 +1,4 @@
-package day3.collection.file;
+package day3.file;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -15,10 +15,12 @@ public class ReadFile {
 
     public void printTwoLetter(String filename) throws IOException{
         FileReader fr = new FileReader(filename);
+        String str = "";
         for(int i=0; i<2; i++){
-            char ch = (char)fr.read();
-            System.out.println(ch);
+            str += (char) fr.read();
+
         }
+        System.out.println(str);
     }
 
     public static void main(String[] args) throws IOException{
