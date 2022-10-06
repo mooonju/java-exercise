@@ -1,4 +1,4 @@
-package day3.collection.file;
+package day3.file;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -12,6 +12,17 @@ public class FileExercise {
         for(File file : files){
             System.out.println(file);
         }
+        /*
+            .\.git
+            .\.git
+            .\.gitignore
+            .\.idea
+            .\aa_file.txt
+            .\a_file.txt
+            .\java-init-project.iml
+            .\out
+            .\src
+         */
     }
 }
 
