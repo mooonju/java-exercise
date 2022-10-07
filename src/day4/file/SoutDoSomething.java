@@ -8,5 +8,6 @@ public class SoutDoSomething implements DoSomething<PopulationMove> {
     @Override
     public List<PopulationMove> work(String str) {
         return null;
+
     }
 }
