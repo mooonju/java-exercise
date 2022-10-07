@@ -9,6 +9,10 @@ public class PopulationMove {
         this.fromSido = fromSido;
         this.toSido = toSido;
     }
+    public  PopulationMove(String fromSido, String toSido){
+        this.fromSido = Integer.parseInt(fromSido);
+        this.toSido = Integer.parseInt(toSido);
+    }
     // get메서드 추가
     public int getFromSido() {
         return fromSido;
