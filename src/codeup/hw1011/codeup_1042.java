@@ -9,5 +9,6 @@ public class codeup_1042 {
         int a = sc.nextInt();
         int b = sc.nextInt();
         System.out.println(a / b);
+
     }
 }
