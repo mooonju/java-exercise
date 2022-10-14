@@ -7,7 +7,7 @@ public class InsertionSort01 {
         // i = 2 일 때 arr[2] vs arr [1]
         for(int i =1; i < arr.length; i++){
             for(int j = i; j > 0; j--){
-//                System.out.printf("i:%d j:%d j-1:%d\n", i, j, j-1);
+                System.out.printf("i:%d j:%d j-1:%d\n", i, j, j-1);
                 if (arr[j] < arr[j-1]) { // arr[1] vs arr[0]
                     // swap
                     int temp = arr[j-1];
