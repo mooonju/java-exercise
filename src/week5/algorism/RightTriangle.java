@@ -1,12 +1,21 @@
 package week5.algorism;
 
 public class RightTriangle {
+
+    private String letter = "*";
+
+    public RightTriangle() { }
+
+    public RightTriangle(String letter) {
+        this.letter = letter;
+    }
+
     public void star(int num) {
         for (int i=0; i<num; i++){
             // for문을 하나 더 쓰고
             // println 말고 print, printf 등을 써서 한줄로 출력
             for (int j=0; j<=i; j++){
-                System.out.printf("* ");
+                System.out.printf(this.letter);
             }
             System.out.printf("\n");
         }
@@ -20,8 +29,9 @@ public class RightTriangle {
         * * * *         i = 3 별이 4개
         */
 
-        RightTriangle rightTriangle = new RightTriangle();
-        rightTriangle.star(10);
+        RightTriangle rightTriangle = new RightTriangle("*" );
+        rightTriangle.star(5);
+
 
     }
 }
