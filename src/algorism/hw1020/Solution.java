@@ -15,6 +15,7 @@ public class Solution {
         return answer;
     }
 
+
     public static void main(String[] args) {
         Solution solution = new Solution();
         long result = solution.solution(0,3);
