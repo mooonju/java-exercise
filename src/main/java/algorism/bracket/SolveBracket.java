@@ -18,7 +18,6 @@ public class SolveBracket {
             String[] splitted= s.split("\\(\\)");
             s = String.join("", splitted);
         }
-
         return s.length() == 0;
     }
 
