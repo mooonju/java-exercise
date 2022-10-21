@@ -1,4 +1,4 @@
-package com.likelion;
+package algorism.stack;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -27,10 +27,10 @@ class Stack01Test {
         stack01.push(10);
         stack01.push(20);
 
-        Assertions.assertEquals(20, stack01.pop());
-        Assertions.assertEquals(10, stack01.pop());
+        assertEquals(20, stack01.pop());
+        assertEquals(10, stack01.pop());
 
         stack01.push(30);
-        Assertions.assertEquals(30, stack01.pop());
+        assertEquals(30, stack01.pop());
     }
 }

@@ -1,4 +1,4 @@
-package com.likelion;
+package algorism.stack;
 
 public class Stack01 {
 
