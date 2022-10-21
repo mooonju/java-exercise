@@ -21,6 +21,7 @@ public class SolveBracket {
         return s.length() == 0;
     }
 
+    // Stack
     public boolean solution(String s) {
 
         Stack<Character> st = new Stack<>();
