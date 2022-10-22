@@ -1,4 +1,4 @@
-package com.likelion;
+package algorism.stack;
 
 import java.util.EmptyStackException;
 
