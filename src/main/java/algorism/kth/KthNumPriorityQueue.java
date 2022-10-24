@@ -27,7 +27,5 @@ public class KthNumPriorityQueue {
         int[][] commands = new int[][]{{2, 5, 3}, {4, 4, 1}, {1, 7, 3}};
         System.out.println(Arrays.toString(kthNum.solution(arr, commands)));
 
-
-
     }
 }
