@@ -2,15 +2,15 @@ package algorism.hash;
 
 public class HashFunction {
     public int hash(String key) {
+        int asciiSum = 0;
         for (int i = 0; i < key.length(); i++) {
-            char c = key.charAt(i);
-            System.out.println(c);
+            asciiSum += key.charAt(i);
         }
-        return 0;
+        return asciiSum % 90;
     }
 
     public static void main(String[] args) {
         HashFunction hf = new HashFunction();
-        hf.hash("moooon");
+        hf.hash("munju");
     }
 }
