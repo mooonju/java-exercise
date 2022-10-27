@@ -9,20 +9,18 @@ public class HashAlgorism {
     // 있으면 0
     // memo를 1바퀴 돌며 1인 값 찾기
     // 1명인 key return
-    // 동명이인 처리 불가
+    // 동명이인 처리
 
     public String solution(String[] participant, String[] completion) {
         String answer = "";
 
         Map<String, Integer> memo = new HashMap<>();
-        for (int i = 0; i < participant.length; i++) {
-            String key = participant[i];
-            memo.put(key, 1);
+        for (String member : participant) {
+            memo.put(member, memo.getOrDefault(member, 0) + 1);
         }
 
-        for (int i = 0; i < completion.length; i++) {
-            String key = completion[i];
-            memo.put(key, 0);
+        for (String member : completion) {
+            memo.put(member, memo.getOrDefault(member, 0) -1);
         }
 
         for (String key : memo.keySet()) {
