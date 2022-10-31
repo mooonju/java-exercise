@@ -14,17 +14,15 @@ public class PrepareTest {
         int[] student1 = {1, 2, 3, 4, 5};
         int[] student2 = {2, 1, 2, 3, 2, 4, 2, 5};
         int[] student3 = {3, 3, 1, 1, 2, 2, 4, 4, 5, 5};
+        int[] score = {0, 0, 0};
 
-        int firstStudentAnswerCnt = 0;
 
         for (int i = 0; i < answer.length; i++) {
             if (answer[i] == student1[i%5]) {
-
+                score[0]++;
             }
         }
 
-
-        System.out.println(firstStudentAnswerCnt);
 
         return new int[0];
     }
