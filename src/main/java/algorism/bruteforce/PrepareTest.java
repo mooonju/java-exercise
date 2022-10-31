@@ -1,6 +1,8 @@
 package algorism.bruteforce;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class PrepareTest {
 //    1번 수포자가 찍는 방식: 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, ...
@@ -36,6 +38,15 @@ public class PrepareTest {
         // 문제 2
         // [5, 0, 0] -> [1]
         // [2, 2, 2] -> [1, 2, 3] 동점일 경우 전부 리턴
+
+        // 최대값 구하기
+        int maxScore = Math.max(score[0], Math.max(score[1], score[2]));
+        List<Integer> max = new ArrayList<>();
+
+        // max와 같으면 idx를 +1 append한다
+        for (int i = 0; i < score.length; i++) {
+            if (maxScore == score[i]) max.add(i+1);
+        }
 
 
 
