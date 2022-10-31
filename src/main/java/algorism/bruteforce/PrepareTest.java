@@ -18,6 +18,7 @@ public class PrepareTest {
         int[] student3 = {3, 3, 1, 1, 2, 2, 4, 4, 5, 5}; // 10개 반복
         int[] score = {0, 0, 0};
 
+        // 나머지 이용해서 루프
         for (int i = 0; i < answer.length; i++) {
             if (answer[i] == student1[i%5]) {
                 score[0]++;
@@ -32,14 +33,21 @@ public class PrepareTest {
 
         System.out.println(Arrays.toString(score));
 
+        // 문제 2
+        // [5, 0, 0] -> [1]
+        // [2, 2, 2] -> [1, 2, 3] 동점일 경우 전부 리턴
+
+
 
         return new int[0];
     }
 
     public static void main(String[] args) {
-        int[] answer = {1, 2, 3, 4, 5};
+        int[] answer1 = {1, 2, 3, 4, 5};
+        int[] answer2 = {1, 3, 2, 4, 2};
         PrepareTest pt = new PrepareTest();
-        pt.solution(answer);
+        pt.solution(answer1);
+        pt.solution(answer2);
 
     }
 }
