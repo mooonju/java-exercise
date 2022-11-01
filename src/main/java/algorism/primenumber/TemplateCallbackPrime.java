@@ -1,12 +1,16 @@
 package algorism.primenumber;
 
+interface StatementStrategy {
+    boolean compare(int a, int b);
+}
+
 public class TemplateCallbackPrime {
 
-    boolean someOperation(int a, int b) {
-        return a < b;
-    }
+//    boolean someOperation(int a, int b) {
+//        return a < b;
+//    } 인터페이스로 교체
 
-    boolean isPrime(int num) {
+    boolean isPrime(int num, StatementStrategy stmt) {
         // i < num
         // i < num / 2
         // i * i < num // while 루프 돌 때 루트로..
