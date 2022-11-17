@@ -10,14 +10,19 @@ public class SeparationToTwoGroups {
         int leftIdx = 0;
         int rightIdx = arr.length - 1;
 
-        while (arr[leftIdx] < pivot) leftIdx += 1;
-        while (arr[rightIdx] > pivot) rightIdx -= 1;
+        while (leftIdx <= rightIdx) {
+            while (arr[leftIdx] < pivot) leftIdx += 1;
+            while (arr[rightIdx] > pivot) rightIdx -= 1;
 
-        int temp  = arr[leftIdx];
-        arr[leftIdx] = arr[rightIdx];
-        arr[rightIdx] = temp;
-        leftIdx += 1;
-        rightIdx -= 1;
+            if (leftIdx <= rightIdx) {
+                int temp  = arr[leftIdx];
+                arr[leftIdx] = arr[rightIdx];
+                arr[rightIdx] = temp;
+                leftIdx += 1;
+                rightIdx -= 1;
+            }
+        }
+
 
         System.out.printf("4:%d 7:%d\n", arr[4], arr[7]);
         System.out.printf("leftIdx:%d rightIdx:%d\n", leftIdx, rightIdx);
