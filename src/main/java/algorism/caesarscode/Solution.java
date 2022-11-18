@@ -16,6 +16,12 @@ public class Solution {
                 } else {
                     answer += (char) (ch + n);
                 }
+            } else if (ch>='A' && ch <='Z') {
+                if (ch+n > 'Z') {
+                    answer += (char) (ch-26+n);
+                } else {
+                    answer += (char) (ch + n);
+                }
             }
         }
         return answer;
@@ -23,7 +29,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution sol = new Solution();
-        String answer = sol.solution("a", 5);
+        String answer = sol.solution("B", 5);
         System.out.println(answer);
     }
 }
