@@ -21,6 +21,12 @@ public class Main {
         return num + sum(num - 1);
     }
 
+    public static int sumOfDigit(int q) {
+        // 재귀로 각 자리 수의 합 구하기
+        if (q == 0) return 0;
+        return q % 10 + sumOfDigit(q / 10);
+    }
+
 
 
     public static void main(String[] args) throws IOException {
