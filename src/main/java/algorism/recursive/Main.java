@@ -6,14 +6,22 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Main {
-    // 재귀로 * n개 한 줄로 출력하기
-    // https://codeup.kr/problem.php?id=
 
     public static void print(int num) {
+        // 재귀로 * n개 한 줄로 출력하기
+        // https://codeup.kr/problem.php?id=
         if (num <= 0) return;
         System.out.printf("*");
         print(num - 1);
     }
+
+    public static int sum(int num) {
+        // 정수 n을 입력받아 1부터 n까지 정수 합 출력하기
+        if (num == 0) return num;
+        return num + sum(num - 1);
+    }
+
+
 
     public static void main(String[] args) throws IOException {
         BufferedReader bf = new BufferedReader(new InputStreamReader((System.in)));
