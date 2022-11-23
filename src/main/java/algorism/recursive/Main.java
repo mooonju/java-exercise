@@ -18,13 +18,20 @@ public class Main {
     public static int sum(int num) {
         // 정수 n을 입력받아 1부터 n까지 정수 합 출력하기
         if (num == 0) return num;
-        return num + sum(num - 1);
+        return num + sum(num - 1)
     }
 
     public static int sumOfDigit(int q) {
         // 재귀로 각 자리 수의 합 구하기
         if (q == 0) return 0;
         return q % 10 + sumOfDigit(q / 10);
+    }
+
+    public static int factorial(int num) {
+        // Factorial
+        // https://codeup.kr/problem.php?id=1912
+        if (num == 1) return num; // 1일 때 1을 리턴
+        return num * factorial(num - 1);
     }
 
 
