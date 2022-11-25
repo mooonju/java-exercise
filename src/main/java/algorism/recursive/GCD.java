@@ -1,8 +1,7 @@
 package algorism.recursive;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class GCD {
     public static int gcd(int a, int b) {
@@ -11,9 +10,13 @@ public class GCD {
     }
 
     public static void main(String[] args) throws IOException {
-
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+        StringTokenizer st = new StringTokenizer(str);
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
         int result = 0;
-        result = gcd(196, 42);
+        result = gcd(a, b);
         System.out.println(result);
     }
 }
